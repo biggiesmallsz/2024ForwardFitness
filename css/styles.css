@@ -126,11 +126,17 @@ main{
 	border-radius: 8px;
 }
 
+.map {
+	border: 8px solid #000;
+	width: 95%;
+	height: 50%;
+}
+
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 630px), print {
 
 	/* Tablet Viewport: show table-desktop class hide moblie class */
-	.table-desktop class{
+	.tablet-desktop{
 		display: block;
 	}
 	
@@ -160,30 +166,124 @@ main{
 		padding: 0.1em 0.75em;
 	}
 	
-}
-/* End of Media Query for Tablet Viewport */
+	/* Tablet Viewport style rules fir main content area */
+	main ul{
+		margin: 0 0 4% 10%;
+	}
+	
+	#exercises {
+		clear: left;
+		border-top: 1px solid #000000;
+		border-bottom: 1px solid #000000;
+		background:linear-gradient(to right, #ccc, #fff);
+/*		background-color: #F2F2F2; */
+		padding: 1% 2%;
+	}
 
-/*#exercises {
-	clear: left;
-	border-top: 1px solid #000000;
-	border-bottom: 1px solid #000000;
-	background-color: #F2F2F2;
-	padding: 1% 2%;
+	#exercises dt{
+		font-weight: bold;
+	}
+
+	#exercise dd{
+		padding: 0.5% 1% 2% 0;
+	}
+
+	.tel-num{
+		font-size: 1.25em;
+	}
+	
+	.map {
+		width: 600px;
+		height: 450px;
+	}
+	
+	#contact {
+		text-align: center;
+	}
+	
+	
+}/* End of Media Query for Tablet Viewport */
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 1015px), print {
+	
+	/* Desktop Viewport: style rule for header*/
+	header {
+		width: 25%;
+		float: left;
+		padding-bottom: 0;
+	}
+	
+	/*desktop viewport: style rules for navigation*/
+	nav{
+		float: right;
+		width: 70%;
+		margin: 4em 1em 0 0;
+	}
+	
+	nav ul{
+		text-align: right;
+	}
+	
+	nav li{
+		border: none;
+	}
+	
+	nav li a{
+		padding: 0.5em 1em;
+	}
+	
+	nav li a:hover {
+		color: #000;
+		background-color: #fff;
+	}
+	
+	/* Desktop Viewport: Style rules for main content*/
+	main{
+		clear: both;
+	}
+	
+	main h1{
+		font-size: 1.8em
+	}
+	
+	#weights, #cardio, #training {
+		width: 29%;
+		float: left;
+		margin: 0 2%;
+	}
+	
+	#exercises {
+		clear: left;
+	}
+	
+}/*Closing Desktop viewport Media Query*/
+
+/* Large Screen Media Query */
+@media screen and (min-width: 1921px) {
+
+	#container {
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+}/* End Large Screen Media Query */ 
+
+
+/* Media Query for Print*/
+@media print{
+	
+	body{
+		background-color: #fff;
+		color: #000;
+	}
 }
 
-#exercises dt{
-	font-weight: bold;
+	.external-link{
+		color: #606;
+		font-weight: bold;
+		text-decoration: none;
 }
-
-#exercise dd{
-	padding: 0.5% 1% 2% 0;
-}
-
-.external-link{
-	color: #606;
-	font-weight: bold;
-	text-decoration: none;
-}*/
 
 #contact .content-email-link {
 	color: #606;
